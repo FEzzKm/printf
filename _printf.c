@@ -29,14 +29,14 @@ int _printf(const char *format, ...)
 				count += print_string(args);
 			else if (specifier == '%')
 				count += print_percent();
-			else if (specifier == 'd')
+			else if (specifier == 'd' || specifier == 'i')
 				count += print_decimal(args);
 			else
 				return (-1);
 		}
 		else
 		{
-			putchar (*ptr);
+			_putchar(*ptr);
 			count++;
 		}
 		ptr++;

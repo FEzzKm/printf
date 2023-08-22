@@ -9,6 +9,7 @@
 int _printf(const char *format, ...);
 
 /*fuctions definition  fuction.c */
+int _putchar(char c);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(void);

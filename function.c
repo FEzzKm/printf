@@ -12,7 +12,7 @@ int print_char(va_list args)
 	int c;
 
 	c = va_arg(args, int);
-	putchar (c);
+	_putchar (c);
 	return (1);
 }
 
@@ -31,7 +31,7 @@ int print_string(va_list args)
 	s = va_arg(args, char *);
 	while (*s != '\0')
 	{
-		putchar (*s);
+		_putchar (*s);
 		s++;
 		count++;
 	}
@@ -45,7 +45,7 @@ int print_string(va_list args)
 
 int print_percent(void)
 {
-	putchar ('%');
+	_putchar ('%');
 	return (1);
 }
 
@@ -64,12 +64,12 @@ int print_decimal(va_list args)
 	dec = va_arg(args, int);
 	if (dec == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		count++;
 	}
 	if (dec < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		count++;
 		dec *= -1;
 	}
@@ -80,6 +80,6 @@ int print_decimal(va_list args)
 		dec /= 10;
 	}
 	while (i-- > 0)
-		putchar(buffer[i]);
+		_putchar(buffer[i]);
 	return (count);
 }
