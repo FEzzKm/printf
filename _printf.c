@@ -29,6 +29,8 @@ int _printf(const char *format, ...)
 				count += print_string(args);
 			else if (specifier == '%')
 				count += print_percent();
+			else if (specifier == 'd')
+				count += print_decimal(args);
 			else
 				return (-1);
 		}
