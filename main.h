@@ -5,7 +5,7 @@
 #include <limits.h>
 #define NULL_STRINGS "(null)"
 
-/*prototype _printf.c */
+/*prototype of _printf.c */
 int _printf(const char *format, ...);
 
 /*fuctions definition  fuction.c */
